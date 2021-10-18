@@ -27,6 +27,7 @@ export default function Navbar() {
 						variant="h6"
 						component="div"
 						sx={{ flexGrow: 0.1 }}
+						onClick={() => push('/orders')}
 					>
 						Orders
 					</Typography>
