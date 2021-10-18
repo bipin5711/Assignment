@@ -14,16 +14,10 @@ const productSchema = new Schema(
 			required: true,
 			trim: true,
 		},
-		// orderId: {
-		// 	type: Number,
-		// 	required: true,
-		// 	ref:'Order',
-		// },
-		// orderDate: {
-		// 	type: Date,
-		// 	required: true,
-		// 	ref: 'Order'
-		// }
+		order: {
+			type: Schema.Types.ObjectId,
+			ref: 'Order'
+		}
 	},
 	{
 		timestamps: true,

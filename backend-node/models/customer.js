@@ -10,6 +10,12 @@ const customerSchema = new Schema(
 			trim: true,
 			unique: true,
 		},
+		orders: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: 'Order',
+			},
+		],
 	},
 	{
 		timestamps: true,

@@ -4,6 +4,7 @@ let Order = require('../models/order');
 
 router.get('/', (req, res) => {
 	Order.find()
+		.populate('products')
 		.then((orders) => res.send(orders))
 		.catch((err) => res.status(400).send('Error: ' + err));
 });
